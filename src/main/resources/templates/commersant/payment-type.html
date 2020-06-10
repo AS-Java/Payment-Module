@@ -27,7 +27,7 @@
                         <div class="flex-row justify-content-between">
                         <div class="check-font-label"><span>Списывать сразу</span></div>
                             <label class="radio-container">
-                            <input type="radio" checked="checked" name="hold" value="1">
+                            <input type="radio" th:checked="${shop.hold==1}" name="hold" value="1">
                             <span class="radio-checkmark"></span>
                         </label>
                         </div>
@@ -38,7 +38,7 @@
                         <div class="flex-row justify-content-between">
                         <div class="check-font-label"><span>Блокировать на счету покупателя</span></div>
                             <label class="radio-container">
-                            <input type="radio" name="hold" value="2">
+                            <input type="radio" th:checked="${shop.hold==2}"name="hold" value="2">
                             <span class="radio-checkmark"></span>
                         </label>
                         </div>
