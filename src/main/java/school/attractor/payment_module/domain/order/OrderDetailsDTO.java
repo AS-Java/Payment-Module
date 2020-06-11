@@ -1,6 +1,7 @@
 package school.attractor.payment_module.domain.order;
 
 import lombok.*;
+import school.attractor.payment_module.domain.config.Utility;
 import school.attractor.payment_module.domain.shop.Shop;
 import school.attractor.payment_module.domain.shop.ShopDTO;
 import school.attractor.payment_module.domain.transaction.TransactionStatus;
@@ -55,8 +56,9 @@ public class OrderDetailsDTO {
                 .shopName(order.getShop().getSiteName())
                 .date(order.getDate())
                 .cardHolderName(order.getCardHolderName())
-                .card( maskCardNumber(order.getCard(), "####********####"))
+                .card(order.getCard())
                 .amount(order.getAmount())
+                .phone(order.getPhone())
                 .residual(order.getResidual())
                 .status(order.getStatus())
                 .transactions(order.getTransactions().stream().map(OrderTransactionList::from).collect(Collectors.toList()))
@@ -72,31 +74,14 @@ public class OrderDetailsDTO {
                 .email(order.getEmail())
                 .date(order.getDate())
                 .cardHolderName(order.getCardHolderName())
-                .card( maskCardNumber(order.getCard(), "####********####"))
+                .card( Utility.maskCardNumber(order.getCard(),"####********####"))
                 .amount(order.getAmount())
                 .residual(order.getResidual())
+                .phone(order.getPhone())
                 .status(order.getStatus())
                 .transactions(order.getTransactions().stream().map(OrderTransactionList::from).collect(Collectors.toList()))
                 .build();
     }
 
-    public static String maskCardNumber(long cardNumber, String mask) {
-        String cardNumberString = String.valueOf(cardNumber);
-        int index = 0;
 
-        StringBuilder maskedNumber = new StringBuilder();
-        for (int i = 0; i < mask.length(); i++) {
-            char c = mask.charAt(i);
-            if (c == '#') {
-                maskedNumber.append(cardNumberString.charAt(index));
-                index++;
-            } else if (c == 'x') {
-                maskedNumber.append(c);
-                index++;
-            } else {
-                maskedNumber.append(c);
-            }
-        }
-        return maskedNumber.toString();
-    }
 }
