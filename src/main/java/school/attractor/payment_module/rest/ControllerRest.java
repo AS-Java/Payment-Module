@@ -2,17 +2,12 @@ package school.attractor.payment_module.rest;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import school.attractor.payment_module.domain.ApacheHttp.ResponseService;
-import school.attractor.payment_module.domain.commersant.CommersantAlreadyRegisteredException;
-import school.attractor.payment_module.domain.commersant.CommersantRegistrationDataDTO;
-import school.attractor.payment_module.domain.commersant.CommersantService;
 import school.attractor.payment_module.domain.exception.OrderNotFound;
 import school.attractor.payment_module.domain.order.Order;
 import school.attractor.payment_module.domain.order.OrderDTO;
@@ -20,13 +15,12 @@ import school.attractor.payment_module.domain.order.OrderDetailsDTO;
 import school.attractor.payment_module.domain.order.OrderService;
 import school.attractor.payment_module.domain.shop.Shop;
 import school.attractor.payment_module.domain.shop.ShopService;
-import school.attractor.payment_module.domain.transaction.NewOrderDetails;
+import school.attractor.payment_module.domain.order.NewOrderDetails;
 import school.attractor.payment_module.domain.transaction.Transaction;
 import school.attractor.payment_module.domain.transaction.TransactionService;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.util.Date;
 import java.util.List;
 
 

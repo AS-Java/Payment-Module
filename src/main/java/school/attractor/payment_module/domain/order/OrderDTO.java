@@ -1,8 +1,6 @@
 package school.attractor.payment_module.domain.order;
 
 import lombok.*;
-import school.attractor.payment_module.domain.shop.ShopDTO;
-import school.attractor.payment_module.domain.transaction.NewOrderDetails;
 import school.attractor.payment_module.domain.transaction.TransactionDTO;
 import school.attractor.payment_module.domain.transaction.TransactionStatus;
 import school.attractor.payment_module.domain.transaction.TransactionType;

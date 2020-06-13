@@ -1,4 +1,4 @@
-package school.attractor.payment_module.domain.transaction;
+package school.attractor.payment_module.domain.order;
 
 import lombok.*;
 import org.hibernate.validator.constraints.CreditCardNumber;
