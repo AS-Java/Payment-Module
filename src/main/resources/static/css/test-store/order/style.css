@@ -31,6 +31,7 @@ body {
 .form {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .right {
@@ -88,8 +89,9 @@ body {
 /* MODAL FORM FOR PURCHASE */
 
 .purchase{
-    width: 880px;
-    min-height: 790px;
+    position: absolute;
+    width: 750px;
+    min-height: 700px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -98,11 +100,12 @@ body {
     -moz-box-shadow: 0 10px 13px 8px rgba(0,0,0,0.32);
     box-shadow: 0 10px 13px 8px rgba(0,0,0,0.32);
     border-radius: 0.2em;
+    top: -20px;
 }
 
 .purchase-header{
-    width: 880px;
-    background-color: lightgrey;
+    width: 100%;
+    background-color: #ffdd2d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,6 +132,9 @@ body {
     height: 56px;
     font-size: 15px;
     font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 8px;
 }
 
 
@@ -136,10 +142,10 @@ body {
     margin-top: 20px;
 }
 .purchase button{
-    background-color: rgb(257, 235, 28);
+    background-color: #ffdd2d;
 }
 .purchase button:hover{
-    background: rgb(237, 195, 68);
+    background: rgb(255, 233, 5);
 }
 
 
@@ -148,6 +154,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
     align-items: flex-start;
+    border-bottom:  1px solid gray;
 }
 
 .purchase hr{
@@ -162,6 +169,7 @@ body {
 .customer-info-text{
     font-size: 22px;
     margin-right: 2px;
+    padding: 3px;
 }
 
 .customer-info-currency{
@@ -241,17 +249,20 @@ body {
     margin-bottom: 20px;
     box-sizing: border-box;
     border: none;
-    background: grey;
-    color: white;
+    border-radius: 5px;
+    background: #ecf1f7;
+    color: black;
 }
 .card-side input::placeholder{
-    color: white;
+    color: #79818c;
 }
 
 .card-side input:focus{
-    border: 2px solid black;
+    transition: 0.1s;
+    background-color: white;
+    box-shadow: inset 0 0 0 1px #616871;
+    outline: none;
 }
-
 
 
 .front-card{
@@ -280,11 +291,20 @@ body {
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
+    border: none;
+    border-radius: 5px;
     font-size: 12px;
-    background: grey;
-    color: white;
+    background: #ecf1f7;
+    color: black;
+
 }
 
+.front-card select:focus {
+    transition: 0.1s;
+    background-color: white;
+    box-shadow: inset 0 0 0 1px #616871;
+    outline: none;
+}
 .front-card span{
     font-size: 25px;
     margin: 0 2px;
@@ -292,8 +312,6 @@ body {
 
 .date-val{
     width: 300px;
-    display: flex;
-    justify-content: flex-start;
 
 }
 
@@ -305,7 +323,6 @@ body {
     left: 25%;
     width: 430px;
     height: 260px;
-
     position: absolute;
     border: 1px black solid;
     border-radius: 0.5em;
@@ -316,7 +333,7 @@ body {
 .back-card-line{
     width: 420px;
     height: 50px;
-    background: darkgrey;
+    background: black;
 }
 
 .back-card input{
