@@ -269,10 +269,10 @@
 }
 
 .lv-dashed[data-label]:after {
-  color: #138D75;
+  color: #fcef0f;
 }
 .lv-dashed div {
-  border: 12px dashed #138D75;
+  border: 12px dashed #ffea00;
   height: inherit;
   width: inherit;
   box-sizing: border-box;
@@ -292,19 +292,19 @@
 
 /* DETERMINATE LINE WITH BORDER */
 .lv-determinate_bordered_line {
-  border: 5px #067861 solid;
+  border: 5px #fcef0f solid;
 }
 .lv-determinate_bordered_line[data-label]:after {
-  color: #138D75;
+  color: #fcef0f;
 }
 .lv-determinate_bordered_line div:nth-child(1) {
   height: 11px;
   width: 0;
-  background-color: #138D75;
+  background-color: #fcef0f;
   border-radius: 3px;
 }
 .lv-determinate_bordered_line div:nth-child(2) {
-  color: #138D75;
+  color: #fcef0f;
   left: 103%;
   top: -3px;
   visibility: hidden;
@@ -312,14 +312,14 @@
 
 /* LINE */
 .lv-bordered_line {
-  border: 5px solid #138D75;
+  border: 5px solid #fcef0f;
 }
 .lv-bordered_line[data-label]:after {
-  color: #138D75;
+  color: #fcef0f;
 }
 .lv-bordered_line div {
   height: 5px;
-  background-color: #138D75;
+  background-color: #ffea00;
   left: 2px;
   top: 3px;
   border-radius: 3px;
@@ -328,7 +328,7 @@
 
 /* BARS */
 .lv-bars[data-label]:after {
-  color: #0B5345;
+  color: #fcef0f;
 }
 .lv-bars div {
   width: 5%;
@@ -338,48 +338,48 @@
 }
 .lv-bars div:nth-child(1) {
   left: 12.5%;
-  background: #2de3c0;
+  background: #f6fc13;
   animation-delay: -0.7s;
 }
 .lv-bars div:nth-child(2) {
   left: 22.5%;
-  background: #1ddab5;
+  background: #f6fc13;
   animation-delay: -0.6s;
 }
 .lv-bars div:nth-child(3) {
   left: 32.5%;
-  background: #1ac4a3;
+  background: #f6fc13;
   animation-delay: -0.5s;
 }
 .lv-bars div:nth-child(4) {
   left: 42.5%;
-  background: #17ad90;
+  background: #f6fc13;
   animation-delay: -0.4s;
 }
 .lv-bars div:nth-child(5) {
   left: 52.5%;
-  background: #14977d;
+  background: #f6fc13;
   animation-delay: -0.3s;
 }
 .lv-bars div:nth-child(6) {
   left: 62.5%;
-  background: #11806a;
+  background: #f6fc13;
   animation-delay: -0.2s;
 }
 .lv-bars div:nth-child(7) {
   left: 72.5%;
-  background: #0e6a58;
+  background: #f6fc13;
   animation-delay: -0.1s;
 }
 .lv-bars div:nth-child(8) {
   left: 82.5%;
-  background: #0B5345;
+  background: #f6fc13;
 }
 
 /* PULSATING DOTS */
 .lv-dots[data-label]:after {
   margin-top: 65%;
-  color: #0B5345;
+  color: #f6fc13;
 }
 .lv-dots div {
   width: 19%;
@@ -391,27 +391,27 @@
 }
 .lv-dots div:nth-child(1) {
   left: 10%;
-  background-color: #1ddab5;
+  background-color: #ffea00;
 }
 .lv-dots div:nth-child(2) {
   left: 32.5%;
-  background-color: #17ad90;
+  background-color: #f6fc13;
   animation-delay: 0.1s;
 }
 .lv-dots div:nth-child(3) {
   left: 55%;
-  background-color: #11806a;
+  background-color: #ffdd2d;
   animation-delay: 0.2s;
 }
 .lv-dots div:nth-child(4) {
   left: 77.5%;
-  background-color: #0B5345;
+  background-color: #fcda2c;
   animation-delay: 0.3s;
 }
 
 /* CIRCLES */
 .lv-circles[data-label]:after {
-  color: #138D75;
+  color: #ffdd2d;
 }
 .lv-circles.tiniest div:before {
   width: 3px;
@@ -442,7 +442,7 @@
   display: block;
   margin: 0 auto;
   border-radius: 50%;
-  background-color: #138D75;
+  background-color: #ffdd2d;
 }
 .lv-circles div:nth-child(1) {
   animation: lv-circles_move_1 1.2s infinite linear;
@@ -505,7 +505,7 @@
 
 /* SQUARES */
 .lv-squares[data-label]:after {
-  color: #0B5345;
+  color: #edff00;
 }
 .lv-squares div {
   width: 40%;
@@ -517,25 +517,25 @@
   /* bottom left corner */
 }
 .lv-squares div:nth-child(1) {
-  background-color: #1ddab5;
+  background-color: #dad004;
   top: 7%;
   left: 7%;
   animation: lv-square1_move 2s ease-in-out infinite;
 }
 .lv-squares div:nth-child(3) {
-  background-color: #17ad90;
+  background-color: #bfbe25;
   top: 7%;
   right: 7%;
   animation: lv-square2_move 2s ease-in-out infinite;
 }
 .lv-squares div:nth-child(2) {
-  background-color: #11806a;
+  background-color: #a9b600;
   bottom: 7%;
   right: 7%;
   animation: lv-square3_move 2s ease-in-out infinite;
 }
 .lv-squares div:nth-child(4) {
-  background-color: #0B5345;
+  background-color: #edff00;
   bottom: 7%;
   left: 7%;
   animation: lv-square4_move 2s ease-in-out infinite;
@@ -780,15 +780,15 @@
 @keyframes lv-dots_pulsate_animation {
   0% {
     transform: scale(0.01);
-    background-color: #1ddab5;
+    background-color: #edff00;
   }
   50% {
     transform: scale(1);
-    background-color: #0B5345;
+    background-color: #bfb900;
   }
   100% {
     transform: scale(0.01);
-    background-color: #1ddab5;
+    background-color: #edff00;
   }
 }
 @keyframes lv-line_animation {
