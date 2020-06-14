@@ -8,10 +8,6 @@ public class CSVUtils {
 
     private static final char DEFAULT__SEPARATOR = ',';
 
-    public static void writeLine(Writer w, List<String> values) throws IOException {
-        writeLine(w, values, DEFAULT__SEPARATOR, ' ');
-    }
-
     public static void writeLine(Writer w, List<String> values, char separators) throws IOException {
         writeLine(w, values, separators, ' ');
     }
