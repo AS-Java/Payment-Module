@@ -53,15 +53,15 @@ public class ControllerRest {
             Order order = orderService.createOrder ( newOrderDetails, shop );
             Transaction transaction = transactionService.makeTransaction(order, order.getAmount(), order.getType());
             orderService.save(order);
-            String trStatus = responseService.sendRequest(transaction);
+//            String trStatus = responseService.sendRequest(transaction);
             order.getTransactions().add(transaction);
             orderService.change(order);
-            if (trStatus.equals("SUCCESS")) {
-                return ResponseEntity.status(HttpStatus.OK).body("okay");
-            } else {
-                return ResponseEntity.status(HttpStatus.FORBIDDEN).body("NOT OK");
-            }
-//            return ResponseEntity.status(HttpStatus.OK).body("okay");
+//            if (trStatus.equals("SUCCESS")) {
+//                return ResponseEntity.status(HttpStatus.OK).body("okay");
+//            } else {
+//                return ResponseEntity.status(HttpStatus.FORBIDDEN).body("NOT OK");
+//            }
+            return ResponseEntity.status(HttpStatus.OK).body("okay");
         }
     }
 
