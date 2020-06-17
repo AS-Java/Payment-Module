@@ -38,7 +38,7 @@
                                     <span th:if="${#fields.hasErrors('account')}" th:errors="*{account}">account Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{registerEmail}" placeholder="Электронная почта для реестров *" th:value="test@mail.ru" required >
+                                    <input type="email" th:field="*{registerEmail}" placeholder="Электронная почта для реестров *" th:text="test'\@'mail.ru" required >
                                     <span th:if="${#fields.hasErrors('registerEmail')}" th:errors="*{registerEmail}">registerEmail Error</span>
                                 </div>
                                 <h4 class="shop-margin">Адрес</h4>
@@ -80,7 +80,7 @@
                                     <span th:if="${#fields.hasErrors('phoneForCustomer')}" th:errors="*{phoneForCustomer}">phoneForCustomer Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{emailForCustomer}" placeholder="Электронная почта *" th:value="test@mail.ru" required >
+                                    <input type="email" th:field="*{emailForCustomer}" placeholder="Электронная почта *" th:text="test'\@'mail.ru" required >
                                     <span th:if="${#fields.hasErrors('emailForCustomer')}" th:errors="*{emailForCustomer}">emailForCustomer Error</span>
                                 </div>
                                 <h4 class="shop-margin">Контактное лицо</h4>
@@ -94,7 +94,7 @@
                                     <span th:if="${#fields.hasErrors('contactPhone')}" th:errors="*{contactPhone}">contactPhone Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{contactEmail}" placeholder="Электронная почта *" th:value="test@mail.ru" required >
+                                    <input type="email" th:field="*{contactEmail}" placeholder="Электронная почта *" th:text="test'\@'mail.ru" required >
                                     <span th:if="${#fields.hasErrors('contactEmail')}" th:errors="*{contactEmail}">contactEmail Error</span>
                                 </div>
                                 <input id="trigger-errors" type="hidden" th:if="${#fields.hasAnyErrors()}">

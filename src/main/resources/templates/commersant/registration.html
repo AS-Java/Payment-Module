@@ -17,7 +17,7 @@
     <form id = "form" class="form" action="/registration" th:action="@{/registration}" th:object="${commersant}" method="post">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div class="input-group">
-            <input id="email" class="input-field" type="text" th:field="*{email}" th:value="test@mail.ru" required>
+            <input id="email" class="input-field" type="text" th:field="*{email}" th:text="test'\@'mail.ru" required>
             <label class="input-label"> Email </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
