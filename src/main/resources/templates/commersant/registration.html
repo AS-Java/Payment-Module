@@ -17,43 +17,43 @@
     <form id = "form" class="form" action="/registration" th:action="@{/registration}" th:object="${commersant}" method="post">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div class="input-group">
-            <input id="email" class="input-field" type="text" th:field="*{email}" required>
+            <input id="email" class="input-field" type="text" th:field="*{email}" required value="test@mail.ru">
             <label class="input-label"> Email </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
 
         <div class="input-group">
-            <input  class="input-field password" th:field="*{password}" type="password" required>
+            <input  class="input-field password" th:field="*{password}" type="password" required value="12345678">
             <label class="input-label"> Password </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>
 
         <div class="input-group">
-            <input class="input-field bic" type="text" th:field="*{bik}" required>
+            <input class="input-field bic" type="text" th:field="*{bik}" required value="QWERTYUI">
             <label class="input-label"> БИК </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('bik')}" th:errors="*{bik}">BIK Error</div>
 
         <div class="input-group">
-            <input class="input-field bin" type="text" th:field="*{bin}" required>
+            <input class="input-field bin" type="text" th:field="*{bin}" required value="123123123123">
             <label class="input-label"> БИН </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('bin')}" th:errors="*{bin}">BIN Error</div>
 
         <div class="input-group">
-            <input class="input-field" type="text" th:field="*{organizationName}" required>
+            <input class="input-field" type="text" th:field="*{organizationName}" required value="test shop">
             <label class="input-label"> Название организации </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('organizationName')}" th:errors="*{organizationName}">Organization Name Error</div>
 
         <div class="input-group">
-            <input class="input-field id-card" type="text" th:field="*{directorIdentityCard}"  required>
+            <input class="input-field id-card" type="text" th:field="*{directorIdentityCard}"  required value="123123123">
             <label class="input-label"> Номер удостоверения владельца </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('directorIdentityCard')}" th:errors="*{directorIdentityCard}">Director Identity Card Error</div>
 
         <div class="input-group">
-            <input class="input-field" type="text" th:field="*{directorName}" required >
+            <input class="input-field" type="text" th:field="*{directorName}" required value="Test Name">
             <label class="input-label"> Имя владельца </label>
         </div>
         <div class="error-block" th:if="${#fields.hasErrors('directorName')}" th:errors="*{directorName}">Director Name Error</div>

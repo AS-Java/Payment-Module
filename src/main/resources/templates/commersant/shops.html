@@ -22,7 +22,7 @@
                                 <div class="advance-input select">
                                     <p><span>*</span> - поля обязательные для заполнения</p>
                                     <select id = "shop" type="text" th:field="*{activity}" class="advance-input-select" required>
-                                        <option value="" default="default" selected="selected">Вид деятельности *</option>
+                                        <option value="SALE_OF_CLOTHING" selected="selected">Вид деятельности *</option>
                                         <option value="SALE_OF_CLOTHING" th:text="#{SALE_OF_CLOTHING}"></option>
                                         <option value="SALE_OF_ELECTRONICS" th:text="#{SALE_OF_ELECTRONICS}"></option>
                                         <option value="SHOE_STORE" th:text="#{SALE_OF_ELECTRONICS}"></option>
@@ -30,38 +30,38 @@
                                     </select>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{siteName}" placeholder="Сайт *" required/>
+                                    <input type="text" th:field="*{siteName}" placeholder="Сайт *" required value="Test Site"/>
                                     <span th:if="${#fields.hasErrors('siteName')}" th:errors="*{siteName}">Site name Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{account}"  placeholder="Счет для выплат *" required/>
+                                    <input type="text" th:field="*{account}"  placeholder="Счет для выплат *" required value="12312312312312312312"/>
                                     <span th:if="${#fields.hasErrors('account')}" th:errors="*{account}">account Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{registerEmail}" placeholder="Электронная почта для реестров *" required/>
+                                    <input type="email" th:field="*{registerEmail}" placeholder="Электронная почта для реестров *" required value="test@mail.ru"/>
                                     <span th:if="${#fields.hasErrors('registerEmail')}" th:errors="*{registerEmail}">registerEmail Error</span>
                                 </div>
                                 <h4 class="shop-margin">Адрес</h4>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{index}" placeholder="Индекс *" required/>
+                                    <input type="text" th:field="*{index}" placeholder="Индекс *" required value="A55A5A5"/>
                                     <span th:if="${#fields.hasErrors('index')}" th:errors="*{index}">index Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{region}" placeholder="Регион,район *" required/>
+                                    <input type="text" th:field="*{region}" placeholder="Регион,район *" required value="Almaty"/>
                                     <span th:if="${#fields.hasErrors('region')}" th:errors="*{region}">region Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{locality}" placeholder="Населенный пункт *" required/>
+                                    <input type="text" th:field="*{locality}" placeholder="Населенный пункт *" required value="Almaty"/>
                                     <span th:if="${#fields.hasErrors('locality')}" th:errors="*{locality}">locality Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{street}" placeholder="Улица *" required/>
+                                    <input type="text" th:field="*{street}" placeholder="Улица *" required value="Shashkin"/>
                                     <span th:if="${#fields.hasErrors('street')}" th:errors="*{street}">street Error</span>
                                 </div>
                                 <div class="flex-row justify-content-between">
                                     <div class="address">
                                         <input type="text" th:field="*{house}" placeholder="Дом, строение *" required minlength="1"
-                                               maxlength="3" size="3"/>
+                                               maxlength="3" size="3" value="56"/>
                                         <span th:if="${#fields.hasErrors('house')}" th:errors="*{house}">house Error</span>
                                     </div>
                                     <div class="address">
@@ -76,25 +76,25 @@
                                 <p class="shop-margin">Покупатели увидят эти контакты на платежной форме</p>
                                 <div class="advance-input">
                                     <input type="number" th:field="*{phoneForCustomer}" placeholder="Телефон *" required minlength="11"
-                                           maxlength="12" size="12"/>
+                                           maxlength="12" size="12" value="87077777777"/>
                                     <span th:if="${#fields.hasErrors('phoneForCustomer')}" th:errors="*{phoneForCustomer}">phoneForCustomer Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{emailForCustomer}" placeholder="Электронная почта *" required/>
+                                    <input type="email" th:field="*{emailForCustomer}" placeholder="Электронная почта *" required value="test@mail.ru"/>
                                     <span th:if="${#fields.hasErrors('emailForCustomer')}" th:errors="*{emailForCustomer}">emailForCustomer Error</span>
                                 </div>
                                 <h4 class="shop-margin">Контактное лицо</h4>
                                 <div class="advance-input">
-                                    <input type="text" th:field="*{contactName}" placeholder="Фамилия, Имя, Отчество *" required/>
+                                    <input type="text" th:field="*{contactName}" placeholder="Фамилия, Имя, Отчество *" required value="Test Test Test"/>
                                     <span th:if="${#fields.hasErrors('contactName')}" th:errors="*{contactName}">contactName Error</span>
                                 </div>
                                 <div class="advance-input">
                                     <input type="tel" th:field="*{contactPhone}" placeholder="Телефон *" required minlength="11"
-                                           maxlength="12" size="12"/>
+                                           maxlength="12" size="12" value="87071231232"/>
                                     <span th:if="${#fields.hasErrors('contactPhone')}" th:errors="*{contactPhone}">contactPhone Error</span>
                                 </div>
                                 <div class="advance-input">
-                                    <input type="email" th:field="*{contactEmail}" placeholder="Электронная почта *" required/>
+                                    <input type="email" th:field="*{contactEmail}" placeholder="Электронная почта *" required value="test@mail.ru"/>
                                     <span th:if="${#fields.hasErrors('contactEmail')}" th:errors="*{contactEmail}">contactEmail Error</span>
                                 </div>
                                 <input id="trigger-errors" type="hidden" th:if="${#fields.hasAnyErrors()}">

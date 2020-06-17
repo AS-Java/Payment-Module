@@ -27,6 +27,7 @@ public class ShopDTO {
     private String registerEmail;
 
     @NotBlank(message = "Введите счет аккаунта")
+    @Size(min = 20, max = 20, message = "Неверное формат счета ( 20 значный код )")
     private String account;
 
     @NotBlank(message = "Введите ваш индекс города")
