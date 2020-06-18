@@ -34,7 +34,7 @@ public class FillData {
             shopRepository.save( testShop );
             shopRepository.saveAll(shops);
 
-            orderRepository.saveAll( GenerateData.addOrdersForCommersant1(testShop));
+//            orderRepository.saveAll( GenerateData.addOrdersForCommersant1(testShop));
             orderRepository.saveAll ( GenerateData.addOrdersForCommersant2 ( shops));
 
         };

@@ -18,6 +18,7 @@ import school.attractor.payment_module.domain.shop.ShopService;
 import school.attractor.payment_module.domain.order.NewOrderDetails;
 import school.attractor.payment_module.domain.transaction.Transaction;
 import school.attractor.payment_module.domain.transaction.TransactionService;
+import school.attractor.payment_module.domain.transaction.TransactionStatus;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -52,6 +53,7 @@ public class ControllerRest {
 //            orderService.save(order);
             Order order = orderService.createOrder ( newOrderDetails, shop );
             Transaction transaction = transactionService.makeTransaction(order, order.getAmount(), order.getType());
+            order.setStatus ( TransactionStatus.APPROVED );
             orderService.save(order);
 //            String trStatus = responseService.sendRequest(transaction);
             order.getTransactions().add(transaction);

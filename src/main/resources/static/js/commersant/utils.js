@@ -1,5 +1,5 @@
 function validateSum(value) {
-    document.getElementById("returnButton").disabled = value > orderDTO.amount;
+    document.getElementById("returnButton").disabled = value > orderDTO.residual;
 }
 
 function dateFormat(date) {
