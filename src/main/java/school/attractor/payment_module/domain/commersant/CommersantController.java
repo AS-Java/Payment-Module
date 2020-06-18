@@ -100,7 +100,16 @@ public class CommersantController{
                                  RedirectAttributes attributes) {
         Order order = orderService.findById ( orderId );
         Transaction transaction = transactionService.makeTransaction ( order, amount, type );
-        String trStatus = responseService.sendRequest ( transaction);
+//        String trStatus = responseService.sendRequest ( transaction);
+        if(transaction.getAmount () == order.getAmount ()){
+            order.setStatus ( TransactionStatus.TOTAL_REFUND);
+            orderService.change ( order );
+        }else {
+            order.setStatus ( TransactionStatus.PARTIAL_REFUND );
+            order.setResidual ( order.getResidual () - transaction.getAmount () );
+            orderService.change ( order );
+        }
+        String trStatus = "SUCCESS";
         order.getTransactions ().add(transaction);
         orderService.change ( order );
         if (trStatus.equals ( "SUCCESS" )) {
